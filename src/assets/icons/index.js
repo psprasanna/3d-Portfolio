@@ -28,6 +28,7 @@ import soundon from './soundon.png'
 import soundoff from './soundoff.png'
 import java from './java.svg'
 import cSharp from './cSharp.svg'
+import mySql from './mySql.png'
 
 export {
     css,
@@ -59,5 +60,6 @@ export {
     soundon,
     soundoff,
     java,
-    cSharp
+    cSharp,
+    mySql
 }

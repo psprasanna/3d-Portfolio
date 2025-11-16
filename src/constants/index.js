@@ -1,4 +1,4 @@
-import { meta, shopify, starbucks, tesla } from "../assets/images";
+import { meta, shopify, starbucks, tesla, galaxy_logo, root_it } from "../assets/images";
 import {
     car,
     contact,
@@ -25,7 +25,8 @@ import {
     threads,
     typescript, 
     java,
-    cSharp
+    cSharp,
+    mySql
 } from "../assets/icons";
 
 export const skills = [
@@ -33,11 +34,6 @@ export const skills = [
         imageUrl: css,
         name: "CSS",
         type: "Frontend",
-    },
-    {
-        imageUrl: express,
-        name: "Express",
-        type: "Backend",
     },
     {
         imageUrl: git,
@@ -60,8 +56,8 @@ export const skills = [
         type: "Frontend",
     },
     {
-        imageUrl: mongodb,
-        name: "MongoDB",
+        imageUrl: mySql,
+        name: "mySql",
         type: "Database",
     },
     {
@@ -69,21 +65,6 @@ export const skills = [
         name: "Java",
         type: "Backend",
     },
-    {
-        imageUrl: mui,
-        name: "Material-UI",
-        type: "Frontend",
-    },
-    {
-        imageUrl: nextjs,
-        name: "Next.js",
-        type: "Frontend",
-    },
-    // {
-    //     imageUrl: nodejs,
-    //     name: "Node.js",
-    //     type: "Backend",
-    // },
     {
         imageUrl: cSharp,
         name: "cSharp",
@@ -95,16 +76,6 @@ export const skills = [
         type: "Frontend",
     },
     {
-        imageUrl: redux,
-        name: "Redux",
-        type: "State Management",
-    },
-    // {
-    //     imageUrl: sass,
-    //     name: "Sass",
-    //     type: "Frontend",
-    // },
-    {
         imageUrl: tailwindcss,
         name: "Tailwind CSS",
         type: "Frontend",
@@ -113,23 +84,76 @@ export const skills = [
         imageUrl: typescript,
         name: "TypeScript",
         type: "Frontend",
-    }
+    },
+    // {
+    //     imageUrl: express,
+    //     name: "Express",
+    //     type: "Backend",
+    // },
+    // {
+    //     imageUrl: nextjs,
+    //     name: "Next.js",
+    //     type: "Frontend",
+    // },
+    // {
+    //     imageUrl: mongodb,
+    //     name: "MongoDB",
+    //     type: "Database",
+    // },
+    // {
+    //     imageUrl: sass,
+    //     name: "Sass",
+    //     type: "Frontend",
+    // },
+    // {
+    //     imageUrl: mui,
+    //     name: "Material-UI",
+    //     type: "Frontend",
+    // },
+    // {
+    //     imageUrl: nodejs,
+    //     name: "Node.js",
+    //     type: "Backend",
+    // },
+    // {
+    //     imageUrl: redux,
+    //     name: "Redux",
+    //     type: "State Management",
+    // },
+
 ];
 
 export const experiences = [
     {
-        title: "React.js Developer",
-        company_name: "Starbucks",
-        icon: starbucks,
-        iconBg: "#accbe1",
-        date: "March 2020 - April 2021",
+        title: "Software Engineer",
+        company_name: "Galaxy weblinks",
+        icon: galaxy_logo,
+        iconBg: "#54345c",
+        date: "June 2024 - Present",
         points: [
-            "Developing and maintaining web applications using React.js and other related technologies.",
-            "Collaborating with cross-functional teams including designers, product managers, and other developers to create high-quality products.",
-            "Implementing responsive design and ensuring cross-browser compatibility.",
-            "Participating in code reviews and providing constructive feedback to other developers.",
+            "Developed and maintained dynamic web applications using Python, CodeIgniter 4, Flask, JavaScript, jQuery, AJAX, HTML, CSS, Bootstrap, and MySQL.",
+            "Implemented PDF report generation and CSV data import/export functionalities to enhance data handling and reporting efficiency.",
+            "Designed and developed a robust model data migration system to transfer complex configurations across multiple related database tables and environments, ensuring data integrity, consistency, and eliminating manual re-creation.",
+            "Implemented Multi-Factor Authentication (MFA) with OTP generation at specific time intervals to strengthen application security.", 
+            "Collaborated with cross-functional teams including designers, product managers, and developers to deliver high-quality, user-centric products.",
+            "Participated in code reviews, provided constructive feedback, and contributed to maintaining clean, efficient, and scalable codebases.",
         ],
     },
+    {
+        title: "Software Development Intern",
+        company_name: "Root IT",
+        icon: root_it,
+        iconBg: "#e88f87",
+        date: "January 2024 - March 2024",
+        points: [
+            "Gained hands-on experience with C#, WPF, and Microsoft SQL Server for developing desktop applications.",
+            "Implemented data-driven UI components and performed CRUD operations using WPF and SQL Server.",
+            "Applied strong problem-solving skills, object-oriented programming (OOP) principles, and used Git for version control.",
+            "Learned core application architecture concepts and followed structured coding standards throughout the development process.",
+        ],
+    },
+
+    /*
     {
         title: "React Native Developer",
         company_name: "Tesla",
@@ -169,6 +193,8 @@ export const experiences = [
             "Participating in code reviews and providing constructive feedback to other developers.",
         ],
     },
+    */
+    
 ];
 
 export const socialLinks = [
