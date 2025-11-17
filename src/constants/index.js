@@ -26,10 +26,23 @@ import {
     typescript, 
     java,
     cSharp,
-    mySql
+    mySql,
+    python,
+    php,
+    linux
 } from "../assets/icons";
 
 export const skills = [
+    {
+        imageUrl: java,
+        name: "Java",
+        type: "Backend",
+    },
+    {
+        imageUrl: html,
+        name: "HTML",
+        type: "Frontend",
+    },
     {
         imageUrl: css,
         name: "CSS",
@@ -41,29 +54,19 @@ export const skills = [
         type: "Version Control",
     },
     {
-        imageUrl: github,
-        name: "GitHub",
-        type: "Version Control",
-    },
-    {
-        imageUrl: html,
-        name: "HTML",
-        type: "Frontend",
-    },
-    {
         imageUrl: javascript,
         name: "JavaScript",
         type: "Frontend",
     },
     {
+        imageUrl: github,
+        name: "GitHub",
+        type: "Version Control",
+    },
+    {
         imageUrl: mySql,
         name: "mySql",
         type: "Database",
-    },
-    {
-        imageUrl: java,
-        name: "Java",
-        type: "Backend",
     },
     {
         imageUrl: cSharp,
@@ -80,10 +83,25 @@ export const skills = [
         name: "Tailwind CSS",
         type: "Frontend",
     },
+    // {
+    //     imageUrl: typescript,
+    //     name: "TypeScript",
+    //     type: "Frontend",
+    // },
     {
-        imageUrl: typescript,
-        name: "TypeScript",
-        type: "Frontend",
+        imageUrl: python,
+        name: "Python",
+        type: "Backend",
+    },
+    {
+        imageUrl: php,
+        name: "Php",
+        type: "Backend",
+    },
+    {
+        imageUrl: linux,
+        name: "Linux",
+        type: "Operating System",
     },
     // {
     //     imageUrl: express,

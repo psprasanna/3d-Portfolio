@@ -2,7 +2,9 @@ import React from "react";
 
 export function VerticalTimeline({ children }) {
   return (
-    <div className="relative ml-4 border-l-2 border-gray-300">
+    <div className="relative w-full max-w-4xl mx-auto">
+      <div className="absolute left-1/2 -translate-x-1/2 h-full border-l-2 border-gray-300"></div>
+
       {children}
     </div>
   );
@@ -14,27 +16,56 @@ export function VerticalTimelineElement({
   icon,
   iconStyle,
   contentStyle,
+  position = "left",
 }) {
-  return (
-    <div className="relative mb-10 ml-6">
+  const isLeft = position === "left";
 
-      {/* Dot/Icon */}
+  return (
+    <div className="relative w-full mb-16">
+
+      {/* Icon */}
       <div
-        className="absolute -left-11 top-0 flex items-center justify-center w-12 h-12 rounded-full shadow-md"
+        className="
+          absolute 
+          left-1/2 
+          -translate-x-1/2 
+          top-0
+          w-12 h-12 rounded-full shadow-md 
+          flex items-center justify-center
+          bg-white
+          z-10
+        "
         style={iconStyle}
       >
         {icon}
       </div>
 
-      {/* Date */}
-      <p className="text-gray-500 text-sm mb-2 ml-2.5">{date}</p>
-
-      {/* Content box */}
+      {/* Date (placed horizontally next to icon) */}
       <div
-        className="bg-white p-5 rounded-lg shadow-md ml-2.5"
-        style={contentStyle}
+        className={`
+          absolute top-3 
+          ${isLeft ? "left-[calc(50%+2rem)]" : "right-[calc(50%+2rem)]"}
+          text-sm text-gray-500
+          whitespace-nowrap
+        `}
       >
-        {children}
+        {date}
+      </div>
+
+      {/* Content Box */}
+      <div
+        className={`
+          w-1/2 
+          mt-10
+          ${isLeft ? "pr-10 text-right" : "pl-10 text-left ml-auto"}
+        `}
+      >
+        <div
+          className="bg-white p-5 rounded-lg shadow-md text-left"
+          style={contentStyle}
+        >
+          {children}
+        </div>
       </div>
     </div>
   );

@@ -29,6 +29,9 @@ import soundoff from './soundoff.png'
 import java from './java.svg'
 import cSharp from './cSharp.svg'
 import mySql from './mySql.png'
+import python from './python.png'
+import php from './php.svg'
+import linux from './linux.png'
 
 export {
     css,
@@ -61,5 +64,8 @@ export {
     soundoff,
     java,
     cSharp,
-    mySql
+    mySql,
+    python,
+    php,
+    linux
 }

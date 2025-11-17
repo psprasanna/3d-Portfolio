@@ -2,12 +2,13 @@
 // import { VerticalTimeline, VerticalTimelineElement }  from 'react-vertical-timeline-component';
 // import 'react-vertical-timeline-component/style.min.css';
 // import { VerticalTimeline, VerticalTimelineElement } from "./components/VerticalTimeline";
+import CTA from "../components/CTA";
 import { VerticalTimeline, VerticalTimelineElement } from "../components/VerticalTimeline";
 
 import { skills, experiences } from "../constants";
 
 const About = () => {
-    console.log(skills)
+    // console.log(skills)
     return (
         <section className="max-container">
             <h1 className="head-text">
@@ -23,7 +24,7 @@ const About = () => {
 
                 <div className="mt-16 flex flex-wrap gap-12">
                     {skills.map((skill) => (
-                        <div className="block-container w-20 h-20"> 
+                        <div className="block-container w-20 h-20" key={skill.name}> 
                             <div className="btn-back rounded-xl" />
                             <div className="btn-front rounded-xl flex justify-center items-center">
                                 <img 
@@ -43,122 +44,59 @@ const About = () => {
                     <p>I've worked with companies, leveling up my skills and teaming up with smart people. Here's the rundown:</p>
                 </div>
 
-                {/* <div className="mt-12 flex">
+                <div className="mt-12">
                     <VerticalTimeline>
-                        {experiences.map((experience) => (
-                            <VerticalTimelineElement 
+                        {experiences.map((experience, index) => (
+                            <VerticalTimelineElement
                                 key={experience.company_name}
                                 date={experience.date}
-                                icon={<div>
-                                    <img 
-                                        src={experience.icon} 
-                                        alt= {experience.company_name} 
-                                        className='w-[60%] h-[60%] object-contain'
-                                    />
-                                </div>}
-                                iconStyle={{ background: experience.iconBg}}
+                                position={index % 2 === 0 ? "left" : "right"}
+                                icon={
+                                    <div className="flex items-center justify-center w-full h-full">
+                                        <img 
+                                        src={experience.icon}
+                                        alt={experience.company_name}
+                                        className="w-[60%] h-[60%] object-contain"
+                                        />
+                                    </div>
+                                }
+                                iconStyle={{
+                                    border: '2px solid white',
+                                    background: experience.iconBg,
+                                    display: 'flex',
+                                    alignItems: 'center',
+                                    justifyContent: 'center',
+                                    boxShadow: 'none',
+                                    borderRadius: '50%',
+                                    padding: '1px'
+                                }}
                                 contentStyle={{
-                                    borderBottom: '8px',
-                                    borderStyle: 'solid',
-                                    borderBottomColor: experience.iconBg,
+                                    borderBottom: '8px solid ' + experience.iconBg,
                                     boxShadow: 'none',
                                 }}
                             >
                                 <div>
-                                    <h3 className="text-black text-xl font-poppins">
-                                        {experience.title}
-                                    </h3>
-                                    <p className='text-black-500 font-medium font-base' style={{ margin:0}}>
-                                        {experience.company_name}
-                                    </p>
+                                    <h3 className="text-black text-xl font-poppins">{experience.title}</h3>
+                                    <p className="text-black/70 font-medium m-0">{experience.company_name}</p>
                                 </div>
 
-                                <ul className='my-5 list-disc ml-5 space-y-2'>
+                                <ul className="my-5 list-disc ml-5 space-y-2">
                                     {experience.points.map((point, index) => (
-                                        <li key={`experience-point-${index}`}className="text-black-500/50 font-normal pl-1 text-sm">
-
+                                        <li key={index} className="text-black/50 font-normal text-sm">
+                                        {point}
                                         </li>
                                     ))}
                                 </ul>
                             </VerticalTimelineElement>
                         ))}
                     </VerticalTimeline>
-
-                </div> */}
-
-                <div className="mt-12 flex"> 
-  <VerticalTimeline>
-    {experiences.map((experience) => (
-      <VerticalTimelineElement 
-        key={experience.company_name}
-        date={experience.date}
-        icon={
-          <div className="flex items-center justify-center w-full h-full">
-            <img 
-              src={experience.icon}
-              alt={experience.company_name}
-              className='w-[60%] h-[60%] object-contain'
-            />
-          </div>
-        }
-//         icon={
-//   <img 
-//     src={experience.icon}
-//     alt={experience.company_name}
-//     className="w-7 h-7 object-contain"
-//   />
-// }
-// icon={
-//   <div className="flex items-center justify-center w-full h-full">
-//     <img
-//       src={experience.icon}
-//       alt={experience.company_name}
-//       className="w-[60%] h-[60%] object-contain"
-//     />
-//   </div>
-// }
-iconStyle={{
-  background: experience.iconBg,
-  display: 'flex',
-  alignItems: 'center',
-  justifyContent: 'center',
-  marginTop: 0, // ensures it doesn’t shift down
-}}
-
-
-        iconStyle={{ background: experience.iconBg }}
-        contentStyle={{
-          borderBottom: '8px solid ' + experience.iconBg,
-          boxShadow: 'none',
-        }}
-      >
-        <div>
-          <h3 className="text-black text-xl font-poppins">
-            {experience.title}
-          </h3>
-          <p className="text-black/70 font-medium" style={{ margin: 0 }}>
-            {experience.company_name}
-          </p>
-        </div>
-
-        <ul className="my-5 list-disc ml-5 space-y-2">
-          {experience.points.map((point, index) => (
-            <li
-              key={`experience-point-${index}`}
-              className="text-black/50 font-normal pl-1 text-sm"
-            >
-              {point}
-            </li>
-          ))}
-        </ul>
-
-      </VerticalTimelineElement>
-    ))}
-  </VerticalTimeline>
-</div>
+                </div>
+                
             </div>
 
             <hr className='border-slate-200'/>
+
+            <CTA />
         </section>
     )
 }
