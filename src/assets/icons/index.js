@@ -32,6 +32,7 @@ import mySql from './mySql.png'
 import python from './python.png'
 import php from './php.svg'
 import linux from './linux.png'
+import employee_system from './employee_system.png'
 
 export {
     css,
@@ -67,5 +68,6 @@ export {
     mySql,
     python,
     php,
-    linux
+    linux,
+    employee_system
 }
