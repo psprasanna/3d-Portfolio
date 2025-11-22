@@ -8,13 +8,13 @@ const Navbar = () => {
         </NavLink>
 
         <nav className="flext text-lg gap-7 font-medium">
-            <NavLink to="/about" className={({ isActive })=> isActive ? 'text-blue-500' :'text-black'}>
+            <NavLink to="/about" className={({ isActive })=> `${isActive ? 'text-blue-500' : 'text-black'} mr-2`}>
                 About
             </NavLink>
-            <NavLink to="/projects" className={({ isActive })=> isActive ? 'text-blue-500' : 'text-black' }>
+            <NavLink to="/projects" className={({ isActive })=>`${isActive ? 'text-blue-500' : 'text-black'} mr-2` }>
                 Projects
             </NavLink>
-            <NavLink to="/contact" className={({ isActive})=> isActive ? 'text-blue-500' : 'text-black'}>
+            <NavLink to="/contact" className={({ isActive})=> isActive ? 'text-blue-500' : 'text-black' }>
                 Contact
             </NavLink>
 
