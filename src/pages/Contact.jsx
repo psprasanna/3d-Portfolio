@@ -32,6 +32,12 @@ const Contact = () => {
         console.log("message:", form.message);
 
         console.log('email sending stopped for testing')
+
+        showAlert({
+            show: true,
+            text: "Send Message is temporarily disabled.",
+            type: "danger"
+        });
         return false;
 
         emailjs.send(
